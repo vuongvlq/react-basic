@@ -1,4 +1,5 @@
 import React from "react";
+import ChildrenComponent from "./ChilldrenComponent";
 
 /**
  * JSX => Return 1 block code HTML
@@ -53,6 +54,9 @@ class MyComponent extends React.Component {
             onClick={(event) => this.handleSubmit(event)}
           />
         </form>
+        <ChildrenComponent name={'children one'} />
+        <ChildrenComponent name={'children two'} />
+        <ChildrenComponent name={'children three'} />
       </>
     );
   }
