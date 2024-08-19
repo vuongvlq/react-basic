@@ -11,7 +11,12 @@ class MyComponent extends React.Component {
 
   state = {
     firstName: '',
-    lastName: ''
+    lastName: '',
+    arrJobs: [
+      { id: 'abcjob1', 'title': 'Developer', salary: '500 $' },
+      { id: 'abcjob2', 'title': 'Tester', salary: '400 $' },
+      { id: 'abcjob3', 'title': 'Designer', salary: '700 $' },
+    ]
   }
 
   handleChangeFirstName = (event) => {
@@ -54,9 +59,12 @@ class MyComponent extends React.Component {
             onClick={(event) => this.handleSubmit(event)}
           />
         </form>
-        <ChildrenComponent name={'children one'} age={25} />
-        <ChildrenComponent name={'children two'} age={26} />
-        <ChildrenComponent name={'children three'} age={27} />
+        <ChildrenComponent
+          name={this.state.firstName}
+          age={25}
+          address={'Quang Nam'}
+          arrJobs={this.state.arrJobs}
+        />
       </>
     );
   }
