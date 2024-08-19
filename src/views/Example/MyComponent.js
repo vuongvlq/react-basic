@@ -9,36 +9,51 @@ import React from "react";
 class MyComponent extends React.Component {
 
   state = {
-    name: "Vuong",
-    old: 25
+    firstName: '',
+    lastName: ''
   }
 
-  handleOnChangeName = (event) => {
+  handleChangeFirstName = (event) => {
     this.setState({
-      name: event.target.value
+      firstName: event.target.value
     });
   }
 
-  handleClickButton = () => {
-    alert("Click me")
+  handleChangeLastName = (event) => {
+    this.setState({
+      lastName: event.target.value
+    });
   }
 
+  handleSubmit = (event) => {
+    console.log('Data Submited: ', this.state);
+    event.preventDefault();
+  }
   render() {
+    console.log(">>> call render ", this.state)
     return (
       <>
-        <div className="first">
-          <input type="text" value={this.state.name} onChange={(event) => this.handleOnChangeName(event)} />
-          {console.log("MyComponent render")}
-          Hello my component, I'm {this.state.name}.
-        </div>
-        <div className="second">
-          I'm {this.state["old"]} years old
-        </div>
-        <div className="third">
-          <button onClick={() => this.handleClickButton()}>Click me</button>
-        </div>
+        <form>
+          <label htmlFor="fname">First name:</label><br />
+          <input
+            type="text"
+            value={this.state.firstName}
+            onChange={(event) => this.handleChangeFirstName(event)}
+          />
+          <br />
+          <label htmlFor="lname">Last name:</label><br />
+          <input
+            type="text"
+            value={this.state.lastName}
+            onChange={(event) => this.handleChangeLastName(event)}
+          />
+          <br>
+          </br>
+          <input type="button" value="Submit"
+            onClick={(event) => this.handleSubmit(event)}
+          />
+        </form>
       </>
-
     );
   }
 }
