@@ -8,27 +8,6 @@ import React from "react";
 
 class ChildrenComponent extends React.Component {
 
-  state = {
-    firstName: '',
-    lastName: ''
-  }
-
-  handleChangeFirstName = (event) => {
-    this.setState({
-      firstName: event.target.value
-    });
-  }
-
-  handleChangeLastName = (event) => {
-    this.setState({
-      lastName: event.target.value
-    });
-  }
-
-  handleSubmit = (event) => {
-    console.log('Data Submited: ', this.state);
-    event.preventDefault();
-  }
   render() {
     console.log(">>> check props ", this.props)
     // let name = this.props.name;
