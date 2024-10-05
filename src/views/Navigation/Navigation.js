@@ -1,7 +1,7 @@
 import React from "react"
 import './Navigation.scss'
 import {
-  Link, NavLink
+  NavLink
 } from "react-router-dom"
 
 class Navigation extends React.Component {
