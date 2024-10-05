@@ -1,4 +1,5 @@
 import React from "react";
+import './Demo.scss'
 
 /**
  * JSX => Return 1 block code HTML
@@ -7,52 +8,52 @@ import React from "react";
  */
 
 class ChildrenComponent extends React.Component {
-  state = {
-    showJobs: false
-  }
+    state = {
+        showJobs: false
+    }
 
-  handleShowHide = () => {
-    this.setState({
-      showJobs: !this.state.showJobs
-    })
-  }
+    handleShowHide = () => {
+        this.setState({
+            showJobs: !this.state.showJobs
+        })
+    }
 
-  handleOnclickDelete = (job) => {
-    console.log('>>> call handleOnclickDelete', job);
-    this.props.deleteAJob(job);
-  }
+    handleOnclickDelete = (job) => {
+        console.log('>>> call handleOnclickDelete', job);
+        this.props.deleteAJob(job);
+    }
 
-  render() {
-    let { arrJobs } = this.props;
-    let { showJobs } = this.state;
-    return (
-      <>
-        {showJobs === false ?
-          <div>
-            <button onClick={() => this.handleShowHide()}>Show</button>
-          </div>
-          :
-          <>
-            <div className='job-list'>
-              {
-                arrJobs.map((item, index) => {
-                  return (
-                    <div key={item.id} display='flex' >
-                      Title: {item.title} - Salary: {item.salary} $
-                      <button onClick={() => this.handleOnclickDelete(item)}>Delete</button>
+    render() {
+        let { arrJobs } = this.props;
+        let { showJobs } = this.state;
+        return (
+            <>
+                {showJobs === false ?
+                    <div>
+                        <button className="btn-show" onClick={() => this.handleShowHide()}>Show</button>
                     </div>
-                  )
-                })
-              }
-            </div>
-            <div>
-              <button onClick={() => this.handleShowHide()} > Hide</button>
-            </div>
-          </>
-        }
-      </>
-    );
-  }
+                    :
+                    <>
+                        <div className='job-list'>
+                            {
+                                arrJobs.map((item, index) => {
+                                    return (
+                                        <div key={item.id} display='flex' >
+                                            Title: {item.title} - Salary: {item.salary} $
+                                            <button onClick={() => this.handleOnclickDelete(item)}>Delete</button>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div>
+                            <button onClick={() => this.handleShowHide()} > Hide</button>
+                        </div>
+                    </>
+                }
+            </>
+        );
+    }
 }
 
 // const ChildrenComponent = (props) => {
