@@ -1,6 +1,7 @@
 import React from "react"
 // import { withRouter } from "react-router"
 import Color from "../HOC/Color"
+import imageSample from "../../assets/images/picture1.png"
 
 class Home extends React.Component {
 
@@ -11,9 +12,15 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div>
-        Hello World from HomePage with
-      </div>
+      <>
+        <div>
+          Hello World from HomePage with
+        </div>
+        <div>
+          <img src={imageSample} style={{ width: "500px", marginTop: "20px" }} alt="Sample" />
+        </div>
+      </>
+
     )
   }
 }
