@@ -1,4 +1,5 @@
-# THIS IS REACT CLASS COMPONENT LEARN FROM HOI DAN IT: https://youtube.com/playlist?list=PLncHg6Kn2JT4C0enPGQPK7ZIlEoZ1ZvRy&si=hqidPRK5_pYWoShp
+# THIS IS REACT CLASS COMPONENT LEARN FROM HOI DAN IT
+Link to Tutorial: https://youtube.com/playlist?list=PLncHg6Kn2JT4C0enPGQPK7ZIlEoZ1ZvRy&si=hqidPRK5_pYWoShp
 
 # Getting Started with Create React App
 
