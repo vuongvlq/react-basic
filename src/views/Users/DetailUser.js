@@ -38,7 +38,7 @@ class DetailUser extends React.Component {
             </div>
           </>
         }
-        <button type="button" onClick={() => this.handleBackButton}>Back</button>
+        <button type="button" onClick={() => this.handleBackButton()}>Back</button>
       </>
     )
   }
